@@ -1,3 +1,7 @@
+import Header from "./Header";
+import PetList from "./PetList";
+import Pet from "./Pet";
+
 function App() {
 
   const pets = [
@@ -38,27 +42,11 @@ function App() {
     }
   ]
 
+
   return (
     <div className="app">
-      <header>
-        <h1>
-          Flatapets
-          <span className="logo" role="img">
-            🐈
-          </span>
-        </h1>
-      </header>
-      <main>
-          <ul className="pet-list">{
-            /* render Pet components in here */
-          }
-            {/* Here's an example / placeholder Pet component */}
-            <li className="pet">
-              <img src={"https://via.placeholder.com/400"} alt={"pet name"} />
-              <h4>{"pet name"}</h4>
-            </li>
-          </ul>
-      </main>
+      <Header />
+      <PetList pets={pets} />
     </div>
   );
 }
